@@ -1,0 +1,33 @@
+vue create vue3-teleport
+
+Vue CLI v4.5.15
+? Generate project in current directory? Yes
+
+Vue CLI v4.5.15
+? Please pick a preset: Default (Vue 3) ([Vue 3] babel, eslint)
+
+
+
+teleport组件,有时候我们需要放置元素到根节点以外的位置
+
+
+teleport组件：
+Teleport(原portal)用于控制在DOM中任一指定父节点下呈现HTML，而不必求助于全局状态或将其拆分为两个组件
+· 控制部分DOM脱离根节点
+· 可以使用本地化逻辑控制组件
+· 适用于fixed或者绝对定位的组件
+
+
+Teleport的to属性可以指定的对象格式：(Teleport，中文是传送  [data-meta]，属性选择器)
+·id -> <telepport to="#id">
+.class -> <telepport to=".className">
+·data -> <telepport to="[data-meta]">
+·动态 -> <telepport:to="props">
+
+
+teleport传送DOM到to属性指定绑定位置
+teleport是保持状态的，使用disabled属性关闭传送
+teleport中可以传送多组DOM，按照先后顺序append
+
+
+teleport组件,用于模态框
